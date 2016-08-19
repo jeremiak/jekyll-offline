@@ -2,6 +2,8 @@
 
 ruby gem/jekyll plugin to use service workers and make site content available offline
 
+Many thanks to @gauntface since the service worker code is nearly wholesale copied from this [HTML 5 Rocks service worker tutorial]( http://www.html5rocks.com/en/tutorials/service-worker/introduction/).
+
 ## Installation
 
 Add this line to your application's Gemfile:
