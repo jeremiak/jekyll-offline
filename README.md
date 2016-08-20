@@ -2,7 +2,9 @@
 
 ruby gem/jekyll plugin to use service workers and make site content available offline
 
-Many thanks to @gauntface since the service worker code is nearly wholesale copied from this [HTML 5 Rocks service worker tutorial]( http://www.html5rocks.com/en/tutorials/service-worker/introduction/).
+Many thanks to @gauntface and [jake] for two great resources on Service Workers:
+* [HTML 5 Rocks service worker tutorial]( http://www.html5rocks.com/en/tutorials/service-worker/introduction/)
+* [Offline cookbook](https://jakearchibald.com/2014/offline-cookbook)
 
 ## Installation
 
@@ -27,6 +29,23 @@ And then execute:
 ## Usage
 
 The plugin does most of the work for you, but you have to initialize the service worker on the page with the `{% register_service_worker %}` liquid tag. It is generally a good idea to put this near the bottom of your default layout so that all pages have it.
+
+You can use a variety of strategies to respond to requests. These strategies were pulled from [the offline cookbook](https://jakearchibald.com/2014/offline-cookbook/#serving-suggestions-responding-to-requests) with minimal changes.
+
+Configure `jekyll-offline` to use a given strategy by adding the following to your `_config.yml`:
+```
+...
+offline:
+  strategy: << whatever you want >>
+```
+
+You can supply the following options as the value for `strategy`:
+* `cache-only`
+* `network-only`
+* `cache-first-network-fallback`
+* `network-first-cache-fallback`
+* `cache-network-race`
+* `cache-then-network` (default)
 
 ## Contributing
 
