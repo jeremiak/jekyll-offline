@@ -1,6 +1,6 @@
 # jekyll-offline
 
-ruby gem/jekyll plugin to use service workers and make site content available offline
+ruby gem/jekyll plugin to use service workers and make site content available offline. When visitors load a site, the service worker will be registered and cache content on their device, enabling people to read the content offline/without a network connection.
 
 Many thanks to @gauntface and @jakearchibald for two great resources on Service Workers:
 * [HTML 5 Rocks service worker tutorial]( http://www.html5rocks.com/en/tutorials/service-worker/introduction/)
